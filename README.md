@@ -79,7 +79,7 @@ Do
         End If
         On Error GoTo 0
     Next
-    WScript.Sleep 5000 ' Check every 5 seconds
+    WScript.Sleep 5000 ' Check every 5 seconds 
 Loop
 
 ## Functions
