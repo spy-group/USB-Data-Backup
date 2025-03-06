@@ -39,13 +39,13 @@ Sub CopyDrive(sourceDrive, destinationFolder)
     Set objFolder = fso.GetFolder(sourceDrive)
     For Each objFile In objFolder.Files
         On Error Resume Next
-        fso.CopyFile objFile.Path, destinationFolder & "\", True
+        fso.CopyFile objFile.Path, destinationFolder & "\", True ' Overwrite files without prompting
         On Error GoTo 0
     Next
     
     For Each objFolder In objFolder.SubFolders
         On Error Resume Next
-        fso.CopyFolder objFolder.Path, destinationFolder & "\" & objFolder.Name, True
+        fso.CopyFolder objFolder.Path, destinationFolder & "\" & objFolder.Name, True ' Overwrite folders without prompting
         On Error GoTo 0
     Next
 End Sub
